@@ -23,23 +23,17 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public Cart addToCart(UUID productId, Integer quantity){
-        Product product = productService.findProductById(productId);
+        //todo retrieve product from repository method
 
-        CartItem cartItem = new CartItem();
-        cartItem.setQuantity(quantity);
-        cartItem.setProduct(product);
-
-        cartItem.setTotalAmount(product.getPrice().multiply(BigDecimal.valueOf(quantity)));
-
-        CART.getCartItemList().add(cartItem);
-        CART.setCartTotalAmount(CART.getCartTotalAmount().add(cartItem.getTotalAmount()));
+        //todo initialise cart item
+        //todo calculate cart total amount
+        //todo add to cart
         return CART;
     }
 
     @Override
     public boolean deleteFromCart(UUID productId){
-        return CART.getCartItemList().removeIf(cartItem ->
-                cartItem.getProduct().getId().toString().
-                equals(productId.toString()));
+        //delete product object from cart using stream
+        return true;
     }
 }
