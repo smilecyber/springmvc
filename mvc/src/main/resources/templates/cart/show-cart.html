@@ -33,7 +33,7 @@
                         <td th:text="${cartItem.getProduct().getName()}"></td>
                         <td  th:text="${cartItem.getQuantity()}"></td>
                         <td  th:text="${cartItem.getTotalAmount()}"></td>
-                        <td><a th:href="@{/cart/{id}(id=${cartItem.getProduct().id})}">Delete From Cart</a></td>
+                        <td><a th:href="@{/delete/{id}(id=${cartItem.getProduct().id})}">Delete From Cart</a></td>
                     </tr>
                     </tbody>
                 </table>

@@ -34,9 +34,10 @@ public class CartController {
         return "cart/show-cart";
     }
 
-    @PostMapping("/delete/{productId}")
-    public String delete(@PathVariable("productId")UUID productId){
+    @GetMapping("/delete/{productId}")
+    public String delete(@PathVariable("productId")UUID productId, Model model){
         cartService.deleteFromCart(productId);
+        model.addAttribute("cart", CART);
         return "cart/show-cart";
     }
 }

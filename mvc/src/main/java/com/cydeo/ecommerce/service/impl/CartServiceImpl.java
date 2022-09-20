@@ -38,6 +38,9 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public boolean deleteFromCart(UUID productId){
+        Product product = productService.findProductById(productId);
+
+        CART.setCartTotalAmount(CART.getCartTotalAmount().subtract(product.getPrice().multiply(BigDecimal.valueOf(product.getRemainingQuantity()))));
         return CART.getCartItemList().removeIf(cartItem ->
                 cartItem.getProduct().getId().toString().
                 equals(productId.toString()));
