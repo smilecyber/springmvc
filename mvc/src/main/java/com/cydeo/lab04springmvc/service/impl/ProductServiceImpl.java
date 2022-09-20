@@ -1,15 +1,13 @@
-package com.cydeo.ecommerce.service.impl;
+package com.cydeo.lab04springmvc.service.impl;
 
-import com.cydeo.ecommerce.model.Product;
-import com.cydeo.ecommerce.repository.ProductRepository;
-import com.cydeo.ecommerce.service.ProductService;
+import com.cydeo.lab04springmvc.model.Product;
+import com.cydeo.lab04springmvc.repository.ProductRepository;
+import com.cydeo.lab04springmvc.service.ProductService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-
-import static com.cydeo.ecommerce.repository.impl.ProductRepositoryImpl.PRODUCT_LIST;
 
 @Service
 public class ProductServiceImpl implements ProductService {

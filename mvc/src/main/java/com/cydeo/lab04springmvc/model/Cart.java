@@ -1,4 +1,4 @@
-package com.cydeo.ecommerce.model;
+package com.cydeo.lab04springmvc.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

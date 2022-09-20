@@ -1,6 +1,6 @@
-package com.cydeo.ecommerce.service;
+package com.cydeo.lab04springmvc.service;
 
-import com.cydeo.ecommerce.model.Cart;
+import com.cydeo.lab04springmvc.model.Cart;
 
 import java.util.UUID;
 

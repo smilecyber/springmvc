@@ -1,10 +1,8 @@
-package com.cydeo.ecommerce.service.impl;
+package com.cydeo.lab04springmvc.service.impl;
 
-import com.cydeo.ecommerce.model.Cart;
-import com.cydeo.ecommerce.model.CartItem;
-import com.cydeo.ecommerce.model.Product;
-import com.cydeo.ecommerce.service.CartService;
-import com.cydeo.ecommerce.service.ProductService;
+import com.cydeo.lab04springmvc.model.Cart;
+import com.cydeo.lab04springmvc.service.CartService;
+import com.cydeo.lab04springmvc.service.ProductService;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;

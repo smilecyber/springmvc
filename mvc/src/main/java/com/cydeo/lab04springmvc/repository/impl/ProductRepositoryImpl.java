@@ -1,7 +1,7 @@
-package com.cydeo.ecommerce.repository.impl;
+package com.cydeo.lab04springmvc.repository.impl;
 
-import com.cydeo.ecommerce.model.Product;
-import com.cydeo.ecommerce.repository.ProductRepository;
+import com.cydeo.lab04springmvc.model.Product;
+import com.cydeo.lab04springmvc.repository.ProductRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
