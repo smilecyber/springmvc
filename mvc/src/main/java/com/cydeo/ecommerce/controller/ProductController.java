@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import static com.cydeo.ecommerce.service.impl.CartServiceImpl.CART;
 
 @Controller
-@RequestMapping("/")
 public class ProductController {
     private final ProductService productService;
 
@@ -20,14 +19,14 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @GetMapping("/list")
+    @RequestMapping("/list")
     public String listProduct(Model model){
         model.addAttribute("productList", productService.listProduct());
         model.addAttribute("cartTotalAmount", CART.getCartTotalAmount());
         return "product/list";
     }
 
-    @GetMapping("/create-form")
+    @RequestMapping("/create-form")
     public String getCreateForm(Model model){
         model.addAttribute("product", new Product());
         return "/product/create-product";

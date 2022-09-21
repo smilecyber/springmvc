@@ -21,20 +21,20 @@ public class CartController {
         this.cartService = cartService;
     }
 
-    @GetMapping("/cart")
+    @RequestMapping("/cart")
     public String index(Model model){
         model.addAttribute("cart", CART);
         return "cart/show-cart";
     }
 
-    @GetMapping("/addToCart/{productId}/{qt}")
+    @RequestMapping("/addToCart/{productId}/{qt}")
     public String addToCart(@PathVariable("productId")UUID productId, @PathVariable("qt") Integer quantity, Model model){
         cartService.addToCart(productId, quantity);
         model.addAttribute("cart", CART);
         return "cart/show-cart";
     }
 
-    @GetMapping("/delete/{productId}")
+    @RequestMapping("/delete/{productId}")
     public String delete(@PathVariable("productId")UUID productId, Model model){
         cartService.deleteFromCart(productId);
         model.addAttribute("cart", CART);
